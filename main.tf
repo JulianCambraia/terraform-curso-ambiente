@@ -28,6 +28,7 @@ module "ec2" {
 module "vpc" {
   source    = "git@github.com:JulianCambraia/terraform-aws-vpc.git"
   vpc_name  = "dev"
+  vpc_cidr  = "172.32.0.0/16"
   nat_count = 2
 }
 
