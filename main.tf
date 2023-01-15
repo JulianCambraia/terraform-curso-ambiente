@@ -23,6 +23,7 @@ module "ec2" {
   int_name  = "WEB"
   user_data = file("./files/userdata.sh")
   ami       = "ami-0b5eea76982371e91"
+  subnet    = module.vpc.public_subnets
 }
 
 module "vpc" {
